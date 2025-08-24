@@ -1,0 +1,148 @@
+:root {
+    --main-bg-color: #1a1a2e;
+    --container-bg-color: #2e2a4a;
+    --accent-color: #e94560;
+    --list-item-bg: #3b305d;
+    --box-bg: #554a85;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-image: linear-gradient(rgb(41, 41, 89), rgba(255, 255, 255, 0.8)), url('marble effekt.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    font-size: 1em;
+}
+
+.header-banner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 2em 0;
+}
+
+.profile-image {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+     object-position: 50% 40%;
+    border-radius: 50%;
+    margin-bottom: 2em;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    border: 3px solid var(--accent-color);
+}
+
+h1 {
+    color: var(--accent-color);
+    font-size: 2em;
+    margin: 0;
+}
+
+.container {
+    background-color: var(--container-bg-color);
+    padding: 2em;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    width: 80%;
+    max-width: 600px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2em; /* Fügt Abstand zum unteren Rand hinzu */
+}
+
+#player-list {
+    margin-top: 1.5em;
+    text-align: left;
+    max-height: 307px;
+    overflow-y: auto;
+    padding-right: 1em;
+    scrollbar-color: var(--accent-color) var(--container-bg-color);
+    scrollbar-width: thin;
+}
+
+#player-list::-webkit-scrollbar {
+    width: 8px;
+}
+
+#player-list::-webkit-scrollbar-track {
+    background: var(--container-bg-color);
+    border-radius: 10px;
+}
+
+#player-list::-webkit-scrollbar-thumb {
+    background-color: var(--accent-color);
+    border-radius: 10px;
+}
+
+.player-item {
+    background-color: var(--list-item-bg);
+    padding: 0.8em;
+    margin-bottom: 0.5em;
+    border-radius: 5px;
+    display: grid;
+    grid-template-columns: 1fr max-content 1fr;
+    align-items: center;
+    gap: 1em;
+    transition: all 0.5s ease-in-out;
+}
+
+.player-item:hover {
+    background-color: #4b3e6d;
+    cursor: pointer;
+    transform: scale(1.02);
+}
+
+.player-name,
+.player-rank,
+.player-wins {
+    font-weight: bold;
+}
+
+.player-rank,
+.player-wins {
+    background-color: var(--box-bg);
+    padding: 0.3em 0.8em;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.player-rank {
+    justify-self: center;
+    min-width: 70px;
+}
+
+.player-wins {
+    white-space: nowrap;
+    justify-self: end;
+}
+
+/* Media Queries für Handys und Tablets */
+@media (max-width: 768px) {
+    body {
+        font-size: 0.em;
+    }
+    .container {
+        width: 95%;
+        padding: 1em;
+    }
+}
+
+/* Media Query für große Bildschirme (Desktops) */
+@media (min-width: 1200px) {
+    body {
+        font-size: 1.7em;
+    }
+    .container {
+        max-width: 800px;
+    }
+}
