@@ -8,7 +8,7 @@
 
 body {
     font-family: Arial, sans-serif;
-    background-image: linear-gradient(rgb(41, 41, 89), rgba(255, 255, 255, 0.8)), url('marble effekt.jpg');
+    background-image: linear-gradient(rgb(41, 41, 89), rgba(34, 8, 36, 0.8)), url('marble-effekt.jpg');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
